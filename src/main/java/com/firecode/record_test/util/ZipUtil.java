@@ -3,6 +3,7 @@ package com.firecode.record_test.util;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 public class ZipUtil {
 
@@ -33,4 +34,19 @@ public class ZipUtil {
 		return depressData;
 	}
 
+	public static byte[] gZip(byte[] data) {
+		byte[] b = null;
+		try {
+			ByteArrayOutputStream bos = new ByteArrayOutputStream();
+			GZIPOutputStream gzip = new GZIPOutputStream(bos);
+			gzip.write(data);
+			gzip.finish();
+			gzip.close();
+			b = bos.toByteArray();
+			bos.close();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return b;
+	}
 }
