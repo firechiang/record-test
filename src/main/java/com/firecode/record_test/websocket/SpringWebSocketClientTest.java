@@ -26,7 +26,7 @@ import com.firecode.record_test.util.ZipUtil;
  * 
  * @author JIANG
  */
-public class WebSocketClientTest {
+public class SpringWebSocketClientTest {
 	
 	private static final Pattern PING_PATTERN = Pattern.compile("\\{(\"ping\"|\"pong\")[:].*\\}");
 	private static final String HEARTBEAT_NAME_PING = "ping";

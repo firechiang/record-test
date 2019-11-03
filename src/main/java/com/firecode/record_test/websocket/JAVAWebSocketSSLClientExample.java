@@ -16,7 +16,7 @@ import org.java_websocket.WebSocketImpl;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 
-public class SSLClientExample {
+public class JAVAWebSocketSSLClientExample {
 
 	/*
 	 * Keystore with certificate created like so (in JKS format):

@@ -12,7 +12,7 @@ import com.neovisionaries.ws.client.WebSocketException;
 import com.neovisionaries.ws.client.WebSocketFactory;
 import com.neovisionaries.ws.client.WebSocketFrame;
 
-public class WebSocketManager {
+public class NvWebSocketManager {
 
     private static final int DEFAULT_SOCKET_CONNECTTIMEOUT = 3000;
     private static final int DEFAULT_SOCKET_RECONNECTINTERVAL = 3000;
@@ -40,11 +40,11 @@ public class WebSocketManager {
         CONNECTING;//正在连接
     }
 
-    public WebSocketManager(String uri) {
+    public NvWebSocketManager(String uri) {
         this(uri, DEFAULT_SOCKET_CONNECTTIMEOUT);
     }
 
-    public WebSocketManager(String uri, int timeout) {
+    public NvWebSocketManager(String uri, int timeout) {
         mUri = uri;//Constants.WEB_SOCKET_URL + deviceToken;
         mWebSocketFactory = new WebSocketFactory().setConnectionTimeout(timeout);
     }
